@@ -1,0 +1,30 @@
+// Define the base class Media
+class Media {
+  void play() {
+    print("Playing media...");
+  }
+}
+
+// Define the derived class Song
+class Song extends Media {
+  String artist;
+
+  Song(this.artist);
+
+  // Override the play method
+  @override
+  void play() {
+    print("Playing song by $artist...");
+  }
+}
+
+// Main function to demonstrate usage
+void main() {
+  // Create instances of Media and Song
+  Media mediaInstance = Media();
+  Song songInstance = Song("Imagine Dragons");
+  
+  // Call play method on each instance
+  mediaInstance.play();
+  songInstance.play();
+}
